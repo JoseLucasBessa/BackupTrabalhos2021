@@ -1,0 +1,33 @@
+algoritmo media;
+
+variáveis
+    x : real;
+    fx : real;
+    fxi : real;
+    ap : real;
+    y : real;
+    ph : inteiro;
+fim-variáveis
+
+início
+   
+    imprima("Digite o primeiro número: ");
+    x := leia();
+    ph := x;
+    ap := x * 0.5;
+    fx := (ap * ap) - x;
+    fxi := 2 * ap;
+    y := ap - (fx/fxi);
+
+    para ph de ph até 0 passo -1 faça
+        ap := y;
+        fx := (ap * ap) - x;
+        fxi := 2 * ap;
+        y := ap - (fx/fxi);
+
+    fim-para        
+
+    imprima("O resultado foi: ",y);
+    
+        
+fim
